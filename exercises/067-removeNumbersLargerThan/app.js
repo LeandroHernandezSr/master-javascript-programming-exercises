@@ -6,5 +6,10 @@ let obj = {
 
 function removeNumbersLargerThan(num, obj) {
     // your code here
-    
+    for (item in obj){
+        if( obj[item] > num){
+            delete obj[item];
+        }
+    }
+    return obj;
 }
