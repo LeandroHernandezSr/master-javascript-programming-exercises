@@ -1,6 +1,18 @@
 function getEvenElementsAtProperty(obj, key) {
     // your code here
-    
+    if( !obj[key] || !Array.isArray(obj[key])){
+      return [];
+    }
+
+    var newArray=[];
+
+    obj[key].forEach(e =>{
+        if( e % 2 == 0){
+          newArray.push(e);
+        }
+    });
+
+    return newArray;
 }
 
 let obj = {
