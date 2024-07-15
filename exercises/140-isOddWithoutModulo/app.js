@@ -3,9 +3,9 @@ function isOddWithoutModulo(num) {
     num = Math.abs(num);
 
     if ((num & 1) === 1) {
-        return true; // Es impar
+        return true; 
     } else {
-        return false; // Es par
+        return false;
     }
 }
 

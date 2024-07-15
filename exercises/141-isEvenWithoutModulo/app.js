@@ -3,9 +3,9 @@ function isEvenWithoutModulo(num) {
     num = Math.abs(num);
 
     if ((num & 1) === 0) {
-        return true; // Es par
+        return true; 
     } else {
-        return false; // Es impar
+        return false; 
     }
 }
 
