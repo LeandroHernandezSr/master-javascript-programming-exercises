@@ -1,6 +1,14 @@
 function filterOddElements(arr) {
   // your code here
-  
+  var newArr=[];
+
+  arr.forEach(e=>{
+    if(e % 2 !=0){
+      newArr.push(e);
+    }
+  });
+
+  return newArr;
 }
 
 let output = filterOddElements([1, 2, 3, 4, 5]);

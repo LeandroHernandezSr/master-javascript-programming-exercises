@@ -1,18 +1,19 @@
 function findSmallestNumberAmongMixedElements(arr) {
-  // your code here
+  if (arr.length === 0) return 0;
+  
   let smallestNumber = Infinity;
-
-  for (let element of arr) {
-    if (typeof element === 'number' && element < smallestNumber) {
-      smallestNumber = element;
+  let hasNumber = false;
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      if (arr[i] < smallestNumber) {
+        smallestNumber = arr[i];
+      }
+      hasNumber = true;
     }
   }
-
-  if (smallestNumber === Infinity) {
-    return 0;
-  } else {
-    return smallestNumber;
-  }
+  
+  return hasNumber ? smallestNumber : 0;
 }
 
 let output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
