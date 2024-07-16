@@ -17,9 +17,21 @@ let currentInventory = [
     }
   ];
 
-function renderInventory(shoeList) {
-    // your code here
-    
-}
+  function renderInventory(shoeList) {
+    let result = [];
+  
+    for (let designer of shoeList) {
+      let designerName = designer.name;
+      let shoes = designer.shoes;
+  
+      for (let shoe of shoes) {
+        if (shoe.name.includes('black')) {
+          result.push([designerName, shoe.name, shoe.price]);
+        }
+      }
+    }
+  
+    return result;
+  }
 
 console.log(renderInventory(currentInventory));
